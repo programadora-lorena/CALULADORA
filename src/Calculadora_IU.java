@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -49,6 +52,11 @@ public class Calculadora_IU extends javax.swing.JFrame {
         });
 
         btnResta.setText("RESTA");
+        btnResta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRestaActionPerformed(evt);
+            }
+        });
 
         btnMultiplicar.setText("MULTIPLICAR");
 
@@ -112,7 +120,20 @@ public class Calculadora_IU extends javax.swing.JFrame {
         
         double suma = nro1+nro2;
         
+        JOptionPane.showMessageDialog(this, "La suma es: "+suma);
+        
     }//GEN-LAST:event_btnSumarActionPerformed
+
+    private void btnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaActionPerformed
+        // TODO add your handling code here:
+        double nro1 = Double.parseDouble(txtNro1.getText());
+        double nro2 = Double.parseDouble(txtNro2.getText());
+        
+        double resta = nro1-nro2;
+        
+        JOptionPane.showMessageDialog(this, "La resta es: "+resta);
+        
+    }//GEN-LAST:event_btnRestaActionPerformed
 
     /**
      * @param args the command line arguments
